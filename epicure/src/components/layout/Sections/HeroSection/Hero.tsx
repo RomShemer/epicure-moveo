@@ -1,11 +1,15 @@
 import styles from "./Hero.module.css";
 import searchIcon from "../../../../assets/General.svg";
+import { restaurants } from "../../../../mock/restaurants"
 import { useState, useEffect } from "react";
 
 const Hero = () => {
     const [searchTerm, setSearchTerm] = useState("");
 
     //todo:connect the search term to the search results page
+    const filteredResults = restaurants.filter((restaurant) =>
+        restaurant.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
 
     return (
         <section className={styles.hero} >
@@ -19,6 +23,7 @@ const Hero = () => {
                     <img src={searchIcon} alt="search Icon" className={styles.searchIcon} />
                     <input 
                         type="text" 
+                        value={searchTerm}
                         placeholder="Search for restaurant cuisine, chef"
                         onChange={(e) => setSearchTerm(e.target.value)} />
                 </div>
