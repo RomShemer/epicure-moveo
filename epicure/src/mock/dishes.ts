@@ -1,0 +1,33 @@
+import type { Dish } from "../types/index"
+
+export const dishes: Dish[] = [
+  {
+    id: "pad-ki-mao",
+    name: "Pad Ki Mao",
+    restaurantId: "tiger-lilly",
+    description:
+      "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut",
+    price: 88,
+    image: "/images/pad-ki-mao.jpg",
+    isSpicy: true
+  },
+  {
+    id: "garbanzo-frito",
+    name: "Garbanzo Frito",
+    restaurantId: "lumina",
+    description:
+      "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
+    price: 98,
+    image: "/images/garbanzo-frito.jpg"
+  },
+  {
+    id: "smoked-pizza",
+    name: "Smoked Pizza",
+    restaurantId: "claro",
+    description:
+      'Basil dough, cashew "butter", demi-glace, bison & radish',
+    price: 65,
+    image: "/images/smoked-pizza.jpg",
+    isVegetarian: true
+  }
+]
