@@ -1,0 +1,79 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 273px;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+
+  width: 564.83px;
+  height: 273px;
+
+  background-image: url("../../../../assets/Hero.svg");
+  background-size: 564.83px 273px;
+  background-repeat: no-repeat;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 65px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 335px;
+  height: 144px;
+  padding: 16px 9px;
+
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  background: rgba(255,255,255,0.88);
+}
+
+.title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 1.97px;
+  color: #000;
+  bottom: 14px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 315px;
+  height: 30px;
+
+  padding: 5px 12px;
+  border: 0.5px solid #000; 
+  border-radius: 4px;
+  background: transparent;
+}
+
+.search input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 1.29px;
+  background: transparent;
+  border: none;
+  width: 100%;
+}
+
+.search input::placeholder {
+  color: #000;
+  opacity: 1;
+}
