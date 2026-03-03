@@ -1,0 +1,26 @@
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 202px;
+  top: 3763px;
+  overflow: hidden;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  padding-left: 19px;
+}
+
+.nav {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 1.92px;
+  color: #000;
+}
