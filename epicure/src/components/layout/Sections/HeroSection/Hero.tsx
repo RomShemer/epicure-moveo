@@ -1,15 +1,43 @@
 import styles from "./Hero.module.css";
 import searchIcon from "../../../../assets/General.svg";
 import { restaurants } from "../../../../mock/restaurants"
-import { useState, useEffect } from "react";
+import { chefs } from "../../../../mock/chefs"
+import { dishes } from "../../../../mock/dishes"
+
+import { useState } from "react";
 
 const Hero = () => {
     const [searchTerm, setSearchTerm] = useState("");
 
     //todo:connect the search term to the search results page
-    const filteredResults = restaurants.filter((restaurant) =>
-        restaurant.name.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+    const normalizedSearch = searchTerm.toLowerCase().trim()
+    
+    const restaurantResults = normalizedSearch
+    ? restaurants.filter((restaurant) =>
+        restaurant.name.toLowerCase().includes(normalizedSearch) ||
+        restaurant.chef.toLowerCase().includes(normalizedSearch) ||
+        restaurant.cuisine.toLowerCase().includes(normalizedSearch)
+      )
+    : []
+
+  const chefResults = normalizedSearch
+    ? chefs.filter((chef) =>
+        chef.name.toLowerCase().includes(normalizedSearch)
+      )
+    : []
+
+  const dishResults = normalizedSearch
+    ? dishes.filter((dish) =>
+        dish.name.toLowerCase().includes(normalizedSearch) ||
+        dish.restaurantId.toLowerCase().includes(normalizedSearch)
+      )
+    : []
+
+  console.log({
+    restaurants: restaurantResults,
+    chefs: chefResults,
+    dishes: dishResults
+  })
 
     return (
         <section className={styles.hero} >
