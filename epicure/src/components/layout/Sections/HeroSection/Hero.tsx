@@ -1,7 +1,11 @@
 import styles from "./Hero.module.css";
 import searchIcon from "../../../../assets/General.svg";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+
+    //todo:connect the search term to the search results page
 
     return (
         <section className={styles.hero} >
@@ -15,7 +19,8 @@ const Hero = () => {
                     <img src={searchIcon} alt="search Icon" className={styles.searchIcon} />
                     <input 
                         type="text" 
-                        placeholder="Search for restaurant cuisine, chef" />
+                        placeholder="Search for restaurant cuisine, chef"
+                        onChange={(e) => setSearchTerm(e.target.value)} />
                 </div>
             </div>
         </section>
