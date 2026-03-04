@@ -1,13 +1,13 @@
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav {
-  display: flex;
-  gap: 24px;
+    display: flex;
+    gap: 24px;
 }
 
 .logo {
@@ -48,5 +48,3 @@
     width: 24px;
     height: 24px;
 }
-
-
