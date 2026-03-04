@@ -63,6 +63,7 @@
     .name {
         font-size: 40px;
         line-height: 47px;
+        white-space: nowrap;
     }
 
     .chef {

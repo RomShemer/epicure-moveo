@@ -18,7 +18,7 @@ const PopularRestaurantsSection = () => {
       <h2 className={styles.title}>popular restaurant in epicure:</h2>
 
       <Swiper className={styles.swiperWrapper}
-        /*modules={[Navigation, Pagination]}*/
+        modules={isDesktop ? [Navigation, Pagination] : []}
         spaceBetween={24}
         slidesPerView={isDesktop ? 3 : 1.4}
         navigation

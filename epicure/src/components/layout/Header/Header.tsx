@@ -24,13 +24,13 @@ const Header = () => {
 
       <img src={logo} alt="Epicure Logo" className={styles.logo} />
 
-      <nav className={styles.nav}>
+      {/*<nav className={styles.nav}>
         {navigationLinks.map((link) => (
           <a key={link.id} href={link.path}>
             {link.label}
           </a>
         ))}
-      </nav>
+      </nav>*/}
 
       <div className={styles.actions}>
         {actionIcons.map((icon) => (
