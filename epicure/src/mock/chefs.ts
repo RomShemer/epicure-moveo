@@ -2,7 +2,7 @@ import type { Chef } from "../types"
 
 export const chefs: Chef[] = [
   {
-    id: "yossi-shitrit",
+    id: 1,
     name: "Yossi Shitrit",
     image: "/images/yossi.jpg",
     bio: `Chef Yossi Shitrit has been living and breathing his culinary dreams
@@ -11,7 +11,7 @@ the fondly-remembered Violet, located in Moshav Udim.`,
     restaurantIds: ["onza", "kitchen-market", "mashya"]
   },
   {
-    id: "ran-shmueli",
+    id: 2,
     name: "Ran Shmueli",
     image: "/images/ran.jpg",
     bio: `Chef Ran Shmueli is known for his modern Mediterranean cuisine,
@@ -19,7 +19,7 @@ blending seasonal ingredients with innovative techniques.`,
     restaurantIds: ["claro"]
   },
   {
-    id: "meir-adoni",
+    id: 3,
     name: "Meir Adoni",
     image: "/images/meir.jpg",
     bio: `Chef Meir Adoni is a leading figure in contemporary European cuisine,
@@ -27,7 +27,7 @@ bringing bold flavors and refined presentation to the table.`,
     restaurantIds: ["lumina"]
   },
   {
-    id: "yanir-green",
+    id: 4,
     name: "Yanir Green",
     image: "/images/yanir.jpg",
     bio: `Chef Yanir Green specializes in Asian fusion cuisine,

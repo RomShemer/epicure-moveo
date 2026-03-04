@@ -1,65 +1,184 @@
 import styles from "./Hero.module.css";
 import searchIcon from "../../../../assets/General.svg";
-import { restaurants } from "../../../../mock/restaurants"
-import { chefs } from "../../../../mock/chefs"
-import { dishes } from "../../../../mock/dishes"
+import xIcon from "../../../../assets/xIcon.svg";
+import { restaurants } from "../../../../mock/restaurants";
+import { chefs } from "../../../../mock/chefs";
+import { dishes } from "../../../../mock/dishes";
+import { heroText } from "../../../../data/heroText";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
+
+const filterBySearch = <T,>(
+    items: T[],
+    search: string,
+    fields: (keyof T)[]
+): T[] => {
+    if (!search) return [];
+
+    return items.filter((item) =>
+        fields.some((field) => {
+            const value = item[field];
+
+            if (Array.isArray(value)) {
+                return value.some((v) =>
+                    String(v).toLowerCase().includes(search)
+                );
+            }
+
+            return String(value).toLowerCase().includes(search);
+        })
+    );
+};
+
+type SearchResultItem = {
+    id: number;
+    name: string;
+};
+
+type Section = {
+  key: string;
+  title: string;
+  data: SearchResultItem[];
+};
 
 const Hero = () => {
     const [searchTerm, setSearchTerm] = useState("");
 
-    //todo:connect the search term to the search results page
-    const normalizedSearch = searchTerm.toLowerCase().trim()
-    
-    const restaurantResults = normalizedSearch
-    ? restaurants.filter((restaurant) =>
-        restaurant.name.toLowerCase().includes(normalizedSearch) ||
-        restaurant.chef.toLowerCase().includes(normalizedSearch) ||
-        restaurant.cuisine.toLowerCase().includes(normalizedSearch)
-      )
-    : []
+    const normalizedSearch = useMemo(
+        () => searchTerm.toLowerCase().trim(),
+        [searchTerm]
+    );
 
-  const chefResults = normalizedSearch
-    ? chefs.filter((chef) =>
-        chef.name.toLowerCase().includes(normalizedSearch)
-      )
-    : []
+    const results = useMemo(() => {
+        if (!normalizedSearch) {
+            return {
+                restaurants: [],
+                chefs: [],
+                dishes: [],
+                cuisines: [],
+            };
+        }
 
-  const dishResults = normalizedSearch
-    ? dishes.filter((dish) =>
-        dish.name.toLowerCase().includes(normalizedSearch) ||
-        dish.restaurantId.toLowerCase().includes(normalizedSearch)
-      )
-    : []
+        const matchedRestaurants: SearchResultItem[] =
+            filterBySearch(restaurants, normalizedSearch, ["name", "chef"])
+                .map(r => ({
+                    id: r.id,
+                    name: r.name,
+                }));
 
-  console.log({
-    restaurants: restaurantResults,
-    chefs: chefResults,
-    dishes: dishResults
-  })
+        const matchedChefs: SearchResultItem[] =
+            filterBySearch(chefs, normalizedSearch, ["name"])
+                .map(c => ({
+                    id: c.id,
+                    name: c.name,
+                }));
+
+        const matchedDishes: SearchResultItem[] =
+            filterBySearch(dishes, normalizedSearch, ["name"])
+                .map(d => ({
+                    id: d.id,
+                    name: d.name,
+                }));
+
+        const matchedCuisines: SearchResultItem[] = [
+            ...new Set(
+                restaurants
+                    .filter(r =>
+                        r.cuisine.toLowerCase().includes(normalizedSearch)
+                    )
+                    .map(r => r.cuisine)
+            ),
+        ].map((cuisine, index) => ({
+            id: index + 1,
+            name: cuisine,
+        }));
+
+        return {
+            restaurants: matchedRestaurants,
+            chefs: matchedChefs,
+            dishes: matchedDishes,
+            cuisines: matchedCuisines,
+        };
+    }, [normalizedSearch]);
+
+    const hasResults =
+        results.restaurants.length > 0 ||
+        results.chefs.length > 0 ||
+        results.dishes.length > 0;
+
+    const sections = useMemo<Section[]>(
+        () => [
+            { key: "restaurants", title: "Restaurants:", data: results.restaurants },
+            { key: "cuisines", title: "Cuisines:", data: results.cuisines },
+            { key: "chefs", title: "Chefs:", data: results.chefs },
+            { key: "dishes", title: "Dishes:", data: results.dishes },
+        ],
+        [results]
+    );
 
     return (
-        <section className={styles.hero} >
-            <div className={styles.background}></div>
-            <div className={styles.overlay}>
-                <h1 className={styles.title}>
-                    Epicure works with the top chef restaurants in Tel Aviv
-                </h1>
+        <section className={styles.hero}>
+            <div className={styles.backgroundWrapper}>
+                <div className={styles.background}></div>
+            </div>
 
-                <div className={styles.search}>
-                    <img src={searchIcon} alt="search Icon" className={styles.searchIcon} />
-                    <input 
-                        type="text" 
-                        value={searchTerm}
-                        placeholder="Search for restaurant cuisine, chef"
-                        onChange={(e) => setSearchTerm(e.target.value)} />
+
+            <div className={styles.overlay}>
+                <h1 className={styles.title}>{heroText.title}</h1>
+
+                <div className={styles.searchAndResults}>
+                    <div className={styles.search}>
+                        <img
+                            src={searchIcon}
+                            alt="Search Icon"
+                            className={styles.searchIcon}
+                        />
+
+                        <input
+                            type="text"
+                            value={searchTerm}
+                            placeholder={heroText.placeholder}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+
+                        {searchTerm.trim() !== "" && <button className={styles.clearButton} onClick={() => setSearchTerm("")}>
+                            <img src={xIcon} alt="Clear Search" className={styles.clearIcon} />
+                        </button>}
+                    </div>
+                    {normalizedSearch && (
+                        <div className={styles.resultsDropdown}>
+                            {sections.map(
+                                (section) =>
+                                    section.data.length > 0 && (
+                                        <div key={section.key} className={styles.resultsSection}>
+                                            <span className={styles.resultsTitle}>
+                                                {section.title}
+                                            </span>
+
+                                            {section.data.map((item) => (
+                                                <div
+                                                    key={item.id ?? item}
+                                                    className={styles.resultItem}
+                                                >
+                                                    {item.name ?? item}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )
+                            )}
+
+                            {!hasResults && (
+                                <span className={styles.resultsTitle}>
+                                    No results found
+                                </span>
+                            )}
+                        </div>
+                    )}
+
                 </div>
             </div>
         </section>
-    )
-
-}
-
+    );
+};
 
 export default Hero;
