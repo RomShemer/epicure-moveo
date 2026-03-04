@@ -36,9 +36,9 @@ type SearchResultItem = {
 };
 
 type Section = {
-  key: string;
-  title: string;
-  data: SearchResultItem[];
+    key: string;
+    title: string;
+    data: SearchResultItem[];
 };
 
 const Hero = () => {
@@ -60,7 +60,7 @@ const Hero = () => {
         }
 
         const matchedRestaurants: SearchResultItem[] =
-            filterBySearch(restaurants, normalizedSearch, ["name", "chef"])
+            filterBySearch(restaurants, normalizedSearch, ["name"])
                 .map(r => ({
                     id: r.id,
                     name: r.name,
@@ -104,7 +104,8 @@ const Hero = () => {
     const hasResults =
         results.restaurants.length > 0 ||
         results.chefs.length > 0 ||
-        results.dishes.length > 0;
+        results.dishes.length > 0 ||
+        results.cuisines.length > 0;
 
     const sections = useMemo<Section[]>(
         () => [
@@ -157,10 +158,10 @@ const Hero = () => {
 
                                             {section.data.map((item) => (
                                                 <div
-                                                    key={item.id ?? item}
+                                                    key={item.id}
                                                     className={styles.resultItem}
                                                 >
-                                                    {item.name ?? item}
+                                                    {item.name}
                                                 </div>
                                             ))}
                                         </div>

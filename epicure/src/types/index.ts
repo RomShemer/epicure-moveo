@@ -1,7 +1,7 @@
 export interface Restaurant {
-  id: string
+  id: number
   name: string
-  chefId: string
+  chefId: number
   chef: string
   cuisine: string
   image: string
@@ -9,9 +9,9 @@ export interface Restaurant {
 }
 
 export interface Dish {
-  id: string
+  id: number
   name: string
-  restaurantId: string
+  restaurantId: number
   description: string
   price: number
   image: string
@@ -21,15 +21,15 @@ export interface Dish {
 }
 
 export interface Chef {
-  id: string
+  id: number
   name: string
   image: string
   bio: string
-  restaurantIds: string[]
+  restaurantIds: number[]
 }
 
 export interface IconMeaning {
-  id: string
+  id: number
   label: string
   icon: string
 }

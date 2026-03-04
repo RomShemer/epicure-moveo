@@ -8,7 +8,7 @@ export const chefs: Chef[] = [
     bio: `Chef Yossi Shitrit has been living and breathing his culinary dreams
 for more than two decades, including running the kitchen in his first restaurant,
 the fondly-remembered Violet, located in Moshav Udim.`,
-    restaurantIds: ["onza", "kitchen-market", "mashya"]
+    restaurantIds: [4, 5, 6]
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ the fondly-remembered Violet, located in Moshav Udim.`,
     image: "/images/ran.jpg",
     bio: `Chef Ran Shmueli is known for his modern Mediterranean cuisine,
 blending seasonal ingredients with innovative techniques.`,
-    restaurantIds: ["claro"]
+    restaurantIds: [1]
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ blending seasonal ingredients with innovative techniques.`,
     image: "/images/meir.jpg",
     bio: `Chef Meir Adoni is a leading figure in contemporary European cuisine,
 bringing bold flavors and refined presentation to the table.`,
-    restaurantIds: ["lumina"]
+    restaurantIds: [2]
   },
   {
     id: 4,
@@ -32,6 +32,6 @@ bringing bold flavors and refined presentation to the table.`,
     image: "/images/yanir.jpg",
     bio: `Chef Yanir Green specializes in Asian fusion cuisine,
 combining vibrant spices with modern culinary creativity.`,
-    restaurantIds: ["tiger-lilly"]
+    restaurantIds: [3]
   }
 ]
