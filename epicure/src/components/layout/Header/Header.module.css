@@ -1,13 +1,24 @@
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav {
-  display: flex;
-  gap: 24px;
+    display: flex;
+    gap: 24px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1.92px;
+    color: #000;
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo {
@@ -49,4 +60,45 @@
     height: 24px;
 }
 
+/* ################################ Desktop styles ################################*/
+@media (min-width: 1024px) {
+    .header {
+        padding-left: 127px;
+        padding-right: 127px;
+    }
 
+    .logo {
+        width: 48.93px;
+        height: 48px;
+        margin-top: 7px;
+        margin-right: 51.07px;
+        margin-left: 0;
+        margin-bottom: 7px;
+    }
+
+    .actions {
+        margin-right: 127px;
+    }
+
+    .actionsIcons {
+        width: 24px;
+        height: 24px;
+    }
+
+    .menu {
+        margin-left: 127px;
+    }
+
+    .menuIcon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav {
+        display: flex;
+        gap: 24px;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 1.92px;
+    }
+}
