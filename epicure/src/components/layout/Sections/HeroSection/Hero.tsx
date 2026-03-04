@@ -5,7 +5,6 @@ import { restaurants } from "../../../../mock/restaurants";
 import { chefs } from "../../../../mock/chefs";
 import { dishes } from "../../../../mock/dishes";
 import { heroText } from "../../../../data/heroText";
-
 import { useState, useMemo } from "react";
 
 const filterBySearch = <T,>(
