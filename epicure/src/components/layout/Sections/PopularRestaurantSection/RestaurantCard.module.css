@@ -1,0 +1,73 @@
+.card {
+    width: 245px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    width: 245px;
+    height: 151.8px;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    height: 81px;
+    background-color: #F9F4EA;
+}
+
+.name {
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 2.67px;
+    color: #000;
+    margin: 0;
+}
+
+.chef {
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    line-height: 20px;
+    letter-spacing: 1.9px;
+    color: #000;
+    margin: 0;
+}
+
+
+/* ################################ Desktop styles ################################*/
+
+@media (min-width: 1024px) {
+
+    .card {
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        height: 235.82px;
+    }
+
+    .content {
+        gap: 8px;
+        padding: 18px;
+        height: 169px;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .chef {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 1.97px;
+    }
+}
