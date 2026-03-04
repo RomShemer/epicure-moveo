@@ -1,4 +1,7 @@
 import type { Restaurant } from "../types"
+import claroImg from "../assets/claro.svg"
+import luminaImg from "../assets/Lumina.svg"
+import tigerLillyImg from "../assets/tiger-lily.svg"
 
 export const restaurants: Restaurant[] = [
   {
@@ -7,7 +10,7 @@ export const restaurants: Restaurant[] = [
     chefId: "ran-shmueli",
     chef: "Ran Shmueli",
     cuisine: "Mediterranean",
-    image: "/images/claro.jpg",
+    image: claroImg,
     rating: 4
   },
   {
@@ -16,7 +19,7 @@ export const restaurants: Restaurant[] = [
     chefId: "meir-adoni",
     chef: "Meir Adoni",
     cuisine: "Modern European",
-    image: "/images/lumina.jpg",
+    image: luminaImg,
     rating: 3
   },
   {
@@ -25,7 +28,7 @@ export const restaurants: Restaurant[] = [
     chefId: "yanir-green",
     chef: "Yanir Green",
     cuisine: "Asian Fusion",
-    image: "/images/tiger-lilly.jpg",
+    image: tigerLillyImg,
     rating: 4
   }
 ]
