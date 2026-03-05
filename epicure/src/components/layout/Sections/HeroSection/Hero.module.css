@@ -1,0 +1,154 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 273px;
+  overflow: visible;
+}
+
+.backgroundWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  width: 564.83px;
+  height: 273px;
+
+  background-image: url("../../../../assets/Hero.svg");
+  background-size: 564.83px 273px;
+  background-repeat: no-repeat;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 65px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 335px;
+  height: 144px;
+  padding: 16px 9px;
+
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 1.97px;
+  color: #000;
+  bottom: 14px;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  height: 30px;
+
+  padding: 5px 12px;
+  border: 0.5px solid #000;
+  border-radius: 4px;
+  background: transparent;
+  margin-bottom: 9px;
+}
+
+.search input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 1.29px;
+  background: transparent;
+  border: none;
+  width: 100%;
+}
+
+.search input::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.clearButton {
+  position: absolute;
+  right: 12px;
+  inset: 7px 12px 7px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+}
+
+.clearIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.searchAndResults {
+  position: relative;
+  width: 100%;
+}
+
+.resultsDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  background: #ffffff;
+  padding: 16px 15px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 62px;
+}
+
+.resultsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resultsTitle {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 1.29px;
+}
+
+.resultItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 1.29px;
+}
+
+.resultMeta {
+  font-size: 14px;
+  opacity: 0.7;
+}
