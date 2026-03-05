@@ -4,6 +4,7 @@ import Hero from './components/layout/Sections/HeroSection/Hero'
 import Footer from './components/layout/Footer/Footer'
 import PopularRestaurantsSection from './components/layout/Sections/PopularRestaurantSection/PopularRestaurants'
 import SignatureDishesSection from './components/layout/Sections/SignatureDishesSection/SignatureDishes'
+import IconsMeaningSection from './components/layout/Sections/IconsMeaningSection/IconsMeaningSection'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <Hero/>
     <PopularRestaurantsSection/>
     <SignatureDishesSection/>
+    <IconsMeaningSection/>
     <Footer/>
     </>
   )
