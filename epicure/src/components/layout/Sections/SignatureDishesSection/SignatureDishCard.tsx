@@ -1,7 +1,6 @@
 import type { Dish } from "../../../../types"
 import DishTag from "./DishTag"
 import styles from "./SignatureDishCard.module.css"
-import { useMediaQuery } from "../../../../hooks/useMediaQuery"
 import NisIcon from "../../../../assets/ils.svg"
 
 interface SignatureDishCardProps {
