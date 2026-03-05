@@ -3,6 +3,8 @@ import Header from './components/layout/Header/Header'
 import Hero from './components/layout/Sections/HeroSection/Hero'
 import Footer from './components/layout/Footer/Footer'
 import PopularRestaurantsSection from './components/layout/Sections/PopularRestaurantSection/PopularRestaurants'
+import SignatureDishesSection from './components/layout/Sections/SignatureDishesSection/SignatureDishes'
+
 function App() {
 
   return (
@@ -10,6 +12,7 @@ function App() {
     <Header/>
     <Hero/>
     <PopularRestaurantsSection/>
+    <SignatureDishesSection/>
     <Footer/>
     </>
   )

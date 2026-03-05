@@ -115,12 +115,12 @@
 /* ===== Swiper Color Override ===== */
 
 :global(.swiper) {
-  --swiper-theme-color: #686868;
+  --swiper-theme-color: #9e9e9e;
 }
 
 :global(.swiper-pagination) {
   position: static !important;
-  margin-top: 0px;
+  margin-top: 5px;
   text-align: center;
 }
 
