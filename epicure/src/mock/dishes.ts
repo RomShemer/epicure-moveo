@@ -37,7 +37,7 @@ export const dishes: Dish[] = [
         price: 65,
         image: smokedPizzaImage,
         isSpicy: false,
-        isVegan: false,
+        isVegan: true,
         isVegetarian: true
     }
 ]

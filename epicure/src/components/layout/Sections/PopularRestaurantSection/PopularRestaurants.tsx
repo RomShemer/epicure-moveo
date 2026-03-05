@@ -22,6 +22,8 @@ const PopularRestaurantsSection = () => {
         modules={isDesktop ? [Navigation, Pagination] : []}
         spaceBetween={24}
         slidesPerView={isDesktop ? 3 : 1.4}
+        centerInsufficientSlides={true}
+        centeredSlides={false}
         navigation
         pagination={{ clickable: true }}
       >

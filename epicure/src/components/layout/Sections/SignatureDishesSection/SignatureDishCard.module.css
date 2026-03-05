@@ -40,6 +40,9 @@
     letter-spacing: 1.9px;
     color: #000;
     margin: 0;
+
+    word-break: normal;
+    overflow-wrap: normal;
 }
 
 .priceContainer {
@@ -73,29 +76,97 @@
 @media (min-width: 1024px) {
 
     .card {
-        width: 100%;
+        width: 380px;
+        height: 654px;
+        display: flex;
+        flex-direction: column;
     }
 
     .image {
         width: 100%;
-        aspect-ratio: 380 / 306;
+        height: 306px;
         object-fit: cover;
     }
 
     .content {
-        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 24px 20px 8px;
         gap: 8px;
-        padding-top: 24px;
-        padding-bottom: 8px;
-        height: 169px;
         align-items: center;
+        width: 100%;
     }
 
     .name {
+        order: 1;
         font-size: 40px;
         line-height: 47px;
-        white-space: wrap;
+        letter-spacing: 2.67px;
         text-align: center;
+        height: 94px;
+        max-width: 234px;
+    }
+
+
+    .dishTagContainer {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        margin: 4px 0;
+    }
+
+
+    .description {
+        order: 3;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        max-width: 295px;
+        width: 100%;
+    }
+
+    .priceWrapper {
+        order: 4;
+        width: 295px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+        gap: 8px;
+    }
+
+    .price {
+        font-size: 24px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 200;
+        line-height: 30px;
+        letter-spacing: 1.97px;
+        color: #000;
+        margin: 0;
+    }
+
+    .priceIcon {
+        width: 14px;
+        height: 19px;
+        object-fit: contain;
+        margin-top: 8px;
+
+    }
+
+    .priceContainer {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    .priceLine {
+        flex: 1;
+        height: 0px;
+        border: 0.5px solid #979797;
     }
 
 }

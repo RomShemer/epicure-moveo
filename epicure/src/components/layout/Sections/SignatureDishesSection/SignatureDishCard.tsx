@@ -8,8 +8,13 @@ interface SignatureDishCardProps {
     dish: Dish
 }
 
+function formatPrice(price: number): string {
+    return Number.isInteger(price)
+        ? price.toString()
+        : price.toFixed(2);
+}
+
 const SignatureDishCard = ({ dish }: SignatureDishCardProps) => {
-    const isDesktop = useMediaQuery("(min-width: 1024px)")
 
     return (
         <div className={styles.card}>
@@ -22,11 +27,18 @@ const SignatureDishCard = ({ dish }: SignatureDishCardProps) => {
             <div className={styles.content}>
                 <h3 className={styles.name}>{dish.name}</h3>
                 <h4 className={styles.description}>{dish.description}</h4>
-                <DishTag dish={dish} />
 
-                <div className={styles.priceContainer}>
-                    <img src={NisIcon} alt="NIS icon" className={styles.priceIcon} />
-                    <p className={styles.price}>{dish.price.toFixed(2)}</p>
+                <div className={styles.dishTagContainer}>
+                    <DishTag dish={dish} />
+                </div>
+
+                <div className={styles.priceWrapper}>
+                    <div className={styles.priceLine} />
+                    <div className={styles.priceContainer}>
+                        <img src={NisIcon} alt="NIS icon" className={styles.priceIcon} />
+                        <p className={styles.price}>{formatPrice(dish.price)}</p>
+                    </div>
+                    <div className={styles.priceLine} />
                 </div>
             </div>
         </div>

@@ -8,10 +8,7 @@ interface DishTagProps {
 
 const DishTag = ({ dish }: DishTagProps) => {
 
-  const activeIcons = iconMeanings.filter(icon =>
-    (icon.label === "Spicy" && dish.isSpicy) ||
-    (icon.label === "Vegan" && dish.isVegan) ||
-    (icon.label === "Vegetarian" && dish.isVegetarian)
+  const activeIcons = iconMeanings.filter(icon => dish[icon.field]
   )
 
   if (!activeIcons.length) return null

@@ -8,6 +8,7 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import chevronIcon from "../../../../assets/ChevronIcon.svg"
+import { signatureDishesText } from "../../../../data/signatureDishes"
 
 const SignatureDishesSection = () => {
 
@@ -15,12 +16,14 @@ const SignatureDishesSection = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Signature Dish Of:</h2>
+      <h2 className={styles.title}>{signatureDishesText.title}</h2>
 
       <Swiper className={styles.swiperWrapper}
         modules={isDesktop ? [Navigation, Pagination] : []}
         spaceBetween={24}
-        slidesPerView={isDesktop ? 3 : 1.4}
+        slidesPerView="auto"
+        centerInsufficientSlides={isDesktop ? true : false}
+        centeredSlides={false}
         navigation
         pagination={{ clickable: true }}
       >
@@ -36,7 +39,7 @@ const SignatureDishesSection = () => {
           onClick={() => { console.log("All Dishes button clicked") }}
         >
           <div className={styles.buttonContent}>
-            <span className={styles.buttonText}>All Dishes</span>
+            <span className={styles.buttonText}>{signatureDishesText.buttonText}</span>
             <img src={chevronIcon} alt="chevron icon" className={styles.buttonIcon} />
           </div>
         </button>

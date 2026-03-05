@@ -1,37 +1,33 @@
-/* ===== Wrapper ===== */
-
 .icons {
-  display: flex;
-  align-items: center;
-  gap: 8px;          
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* ===== Individual Icon ===== */
-
 .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .icon img {
-  width: 30px;
-  height: 24px;
-  object-fit: contain;
+    width: 30px;
+    height: 24px;
+    object-fit: contain;
 }
 
 /* ################################ Desktop styles ################################ */
 
 @media (min-width: 1024px) {
 
-  .icons {
-    gap: 12px;
-    margin-top: 12px;
-  }
+    .icons {
+        gap: 12px;
+        margin-top: 12px;
+    }
 
-  .icon img {
-    width: 22px;
-    height: 22px;
-  }
+    .icon img {
+        width: 40px;
+        height: 31px;
+    }
 }
