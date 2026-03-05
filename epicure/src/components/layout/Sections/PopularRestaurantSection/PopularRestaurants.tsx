@@ -8,6 +8,7 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import chevronIcon from "../../../../assets/ChevronIcon.svg"
+import { popularRestaurantsText } from "../../../../data/popularRestaurants"
 
 const PopularRestaurantsSection = () => {
 
@@ -15,7 +16,7 @@ const PopularRestaurantsSection = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>popular restaurant in epicure:</h2>
+      <h2 className={styles.title}>{popularRestaurantsText.title}</h2>
 
       <Swiper className={styles.swiperWrapper}
         modules={isDesktop ? [Navigation, Pagination] : []}
@@ -33,10 +34,10 @@ const PopularRestaurantsSection = () => {
 
       <div className={styles.buttonContainer}>
         <button className={styles.button}
-          onClick={() => { console.log("All Restaurants button clickedß") }}
+          onClick={() => { console.log("All Restaurants button clicked") }}
         >
           <div className={styles.buttonContent}>
-            <span className={styles.buttonText}>All Restaurants</span>
+            <span className={styles.buttonText}>{popularRestaurantsText.buttonText}</span>
             <img src={chevronIcon} alt="chevron icon" className={styles.buttonIcon} />
           </div>
         </button>
