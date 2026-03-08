@@ -130,7 +130,6 @@
         height: 100%;
         object-fit: contain;
         object-position: center 60%;
-
     }
 
     .nameOverlay {
@@ -167,7 +166,6 @@
     }
 
     .restaurantsTitle {
-        text-align: center;
         font-size: 30px;
         margin-bottom: 40px;
     }
@@ -176,5 +174,4 @@
 .restaurants :global(.swiper) {
     width: 100%;
     margin-left: 0 !important;
-
 }
