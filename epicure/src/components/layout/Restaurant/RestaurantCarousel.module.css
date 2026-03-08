@@ -35,18 +35,13 @@
     margin-bottom: 5.5px;
 }
 
-
-
-/* ################################ Desktop styles ################################*/
-
 @media (--desktop) {
 
     .swiperWrapper {
         padding-left: 0;
         padding-right: 0;
-        display: flex;
-        flex-direction: row;
         max-width: 1185px;
+        margin: 0 auto;
     }
 
     .swiperWrapper {
@@ -56,6 +51,8 @@
     .buttonContainer {
         display: flex;
         justify-content: flex-end;
+        max-width: 1188px;
+        margin: 0 auto;
     }
 
     .button {
@@ -76,16 +73,10 @@
     }
 }
 
-/* ===== Swiper Color Override ===== */
-
 :global(.swiper) {
     --swiper-theme-color: #686868;
 
 }
-
-/*:global(.swiper) {
-    margin-left: 0 !important;
-}*/
 
 :global(.swiper-pagination) {
     position: static !important;
@@ -94,5 +85,5 @@
 }
 
 :global(.swiper-slide) {
-  display: flex;
+    display: flex;
 }
