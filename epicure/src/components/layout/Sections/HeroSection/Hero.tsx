@@ -6,6 +6,10 @@ import { chefs } from "../../../../mock/chefs";
 import { dishes } from "../../../../mock/dishes";
 import { heroText } from "../../../../data/heroText";
 import { useState, useMemo } from "react";
+import backgroundDesktop from "../../../../assets/hero-picture 1.png"
+import backgroundMobile from "../../../../assets/Hero.svg"
+import { useMediaQuery } from "../../../../hooks/useMediaQuery"
+
 
 const filterBySearch = <T,>(
     items: T[],
@@ -41,6 +45,8 @@ type Section = {
 };
 
 const Hero = () => {
+    const isDesktop = useMediaQuery("(min-width: 1024px)")
+
     const [searchTerm, setSearchTerm] = useState("");
 
     const normalizedSearch = useMemo(
@@ -118,8 +124,9 @@ const Hero = () => {
 
     return (
         <section className={styles.hero}>
+
             <div className={styles.backgroundWrapper}>
-                <div className={styles.background}></div>
+                <img src={isDesktop? backgroundDesktop : backgroundMobile} className={styles.background} />
             </div>
 
 
