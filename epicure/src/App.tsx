@@ -6,6 +6,7 @@ import PopularRestaurantsSection from './components/layout/Sections/PopularResta
 import SignatureDishesSection from './components/layout/Sections/SignatureDishesSection/SignatureDishes'
 import IconsMeaningSection from './components/layout/Sections/IconsMeaningSection/IconsMeaningSection'
 import ChefOfTheWeekSection from './components/layout/Sections/ChefOfTheWeekSection/ChefOfTheWeekSection'
+import AboutSection from './components/layout/Sections/AboutSection/AboutSection'
 
 
 import { chefs } from './mock/chefs'
@@ -26,6 +27,7 @@ function App() {
     <SignatureDishesSection/>
     <IconsMeaningSection/>
     <ChefOfTheWeekSection chef={selectedChef!}/>
+    <AboutSection/>
     <Footer/>
     </>
   )
