@@ -66,10 +66,10 @@ const Hero = () => {
                 }));
 
         const matchedChefs: SearchResultItem[] =
-            filterBySearch(chefs, normalizedSearch, ["name"])
+            filterBySearch(chefs, normalizedSearch, ["firstName", "lastName"])
                 .map(c => ({
                     id: c.id,
-                    name: c.name,
+                    name: `${c.firstName} ${c.lastName}`,
                 }));
 
         const matchedDishes: SearchResultItem[] =
