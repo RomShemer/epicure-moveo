@@ -1,3 +1,5 @@
+@import "../../../config/breakpoints.css";
+
 .swiperWrapper {
     padding-left: 0px;
 }
@@ -37,7 +39,7 @@
 
 /* ################################ Desktop styles ################################*/
 
-@media (min-width: 1024px) {
+@media (--desktop) {
 
     .swiperWrapper {
         padding-left: 0;
@@ -92,6 +94,5 @@
 }
 
 :global(.swiper-slide) {
-  width: auto;
   display: flex;
 }

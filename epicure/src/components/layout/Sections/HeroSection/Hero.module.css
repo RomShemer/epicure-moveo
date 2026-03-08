@@ -1,3 +1,5 @@
+@import "../../../../config/breakpoints.css";
+
 .hero {
   position: relative;
   width: 100%;
@@ -149,7 +151,7 @@
   opacity: 0.7;
 }
 
-@media (min-width: 1024px) {
+@media (--desktop) {
   .hero {
     width: 100%;
     aspect-ratio: 1440 / 696;

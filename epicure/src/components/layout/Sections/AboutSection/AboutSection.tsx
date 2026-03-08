@@ -1,6 +1,6 @@
 import styles from "./AboutSection.module.css"
 import { aboutContent } from "../../../../mock/about"
-import StoreButton from "./storeButton"
+import StoreButton from "./StoreButton"
 
 const AboutSection = () => {
     const { title, logo, paragraphs, storeButtons } = aboutContent

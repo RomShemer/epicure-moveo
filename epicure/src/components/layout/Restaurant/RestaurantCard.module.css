@@ -1,3 +1,5 @@
+@import "../../../config/breakpoints.css";
+
 .card {
     width: 245px;
     display: flex;
@@ -40,9 +42,7 @@
 }
 
 
-/* ################################ Desktop styles ################################*/
-
-@media (min-width: 1024px) {
+@media (--desktop) {
 
     .card {
         display: flex;

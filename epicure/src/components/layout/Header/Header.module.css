@@ -1,7 +1,14 @@
+@import "../../../config/breakpoints.css";
+
 .header {
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+.left {
+    display: flex;
     align-items: center;
 }
 
@@ -60,24 +67,34 @@
     height: 24px;
 }
 
-/* ################################ Desktop styles ################################*/
-@media (min-width: 1024px) {
+
+@media (--desktop) {
+
     .header {
-        padding-left: 127px;
-        padding-right: 127px;
+        padding: 14px 127px;
+        height: 64px;
+    }
+
+    .left {
+        gap: 32px;
     }
 
     .logo {
-        width: 48.93px;
-        height: 48px;
-        margin-top: 7px;
-        margin-right: 51.07px;
-        margin-left: 0;
-        margin-bottom: 7px;
+        width: 162px;
+        height: 33px;
+        margin: 0;
+    }
+
+    .nav {
+        gap: 32px;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 1.92px;
     }
 
     .actions {
-        margin-right: 127px;
+        margin: 0;
+        gap: 20px;
     }
 
     .actionsIcons {
@@ -94,11 +111,4 @@
         height: 28px;
     }
 
-    .nav {
-        display: flex;
-        gap: 24px;
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 1.92px;
-    }
 }
