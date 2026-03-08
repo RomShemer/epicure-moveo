@@ -24,3 +24,22 @@
     text-decoration: none;
     
 }
+
+
+@media (min-width: 1024px) {
+
+    .footer {
+        height: 85px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav {
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+    }
+
+}
