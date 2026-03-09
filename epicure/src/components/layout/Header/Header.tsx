@@ -7,6 +7,8 @@ import profileIcon from "../../../assets/ProfileIcon.svg";
 import cartIcon from "../../../assets/GeneralCart.svg";
 import { navigationLinks } from "../../../data/navigation";
 import { useMediaQuery } from "../../../hooks/useMediaQuery"
+import { useState } from "react";
+import NavigationMenu from "./NavigationMenu";
 
 
 const actionIcons = [
@@ -19,15 +21,26 @@ const Header = () => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   const showMenu = !isDesktop;
   const showNav = isDesktop;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   return (
     <header className={styles.header}>
 
       {showMenu && (
         <div className={styles.menu}>
-          <img src={menuIcon} alt="Menu Icon" className={styles.menuIcon} />
+          <button
+            className={styles.menuButton}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <img src={menuIcon} alt="Menu Icon" className={styles.menuIcon} />
+          </button>
         </div>
       )}
+
+      <NavigationMenu
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)} />
 
       <div className={styles.left}>
         <img
