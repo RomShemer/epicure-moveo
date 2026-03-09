@@ -1,4 +1,7 @@
 import type { Dish } from "../types/index"
+import padKiMaoImage from "../assets/pad-ki-mao.svg"
+import garbanzoFritoImage from "../assets/garbanzo-frito.svg"
+import smokedPizzaImage from "../assets/smoked-pizza.svg"
 
 export const dishes: Dish[] = [
     {
@@ -8,8 +11,10 @@ export const dishes: Dish[] = [
         description:
             "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut",
         price: 88,
-        image: "/images/pad-ki-mao.jpg",
-        isSpicy: true
+        image: padKiMaoImage,
+        isSpicy: true,
+        isVegan: false,
+        isVegetarian: false
     },
     {
         id: 2,
@@ -18,7 +23,10 @@ export const dishes: Dish[] = [
         description:
             "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
         price: 98,
-        image: "/images/garbanzo-frito.jpg"
+        image: garbanzoFritoImage,
+        isSpicy: true,
+        isVegan: false,
+        isVegetarian: false
     },
     {
         id: 3,
@@ -27,7 +35,9 @@ export const dishes: Dish[] = [
         description:
             'Basil dough, cashew "butter", demi-glace, bison & radish',
         price: 65,
-        image: "/images/smoked-pizza.jpg",
+        image: smokedPizzaImage,
+        isSpicy: false,
+        isVegan: true,
         isVegetarian: true
     }
 ]

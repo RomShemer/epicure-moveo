@@ -65,8 +65,8 @@
 
     .section {
         margin-top: 80px;
-        padding-left: 127.5px;
-        padding-right: 127.5px;
+       padding-left: 126px;
+       padding-right: 126px;
     }
 
     .title {
@@ -81,13 +81,9 @@
     .swiperWrapper {
         padding-left: 0;
         padding-right: 0;
-        display: flex;
-        flex-direction: rows;
-    }
+        }
 
-    .swiperWrapper {
-    position: relative;
-}
+
 
     .buttonContainer {
         display: flex;
@@ -115,12 +111,16 @@
 /* ===== Swiper Color Override ===== */
 
 :global(.swiper) {
-  --swiper-theme-color: #686868;
+  --swiper-theme-color: #9e9e9e;
+}
+
+:global(.swiper-slide) {
+  width: auto !important;
 }
 
 :global(.swiper-pagination) {
   position: static !important;
-  margin-top: 0px;
+  margin-top: 5px;
   text-align: center;
 }
 
