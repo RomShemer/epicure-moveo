@@ -22,7 +22,8 @@ export interface Dish {
 
 export interface Chef {
   id: number
-  name: string
+  firstName: string
+  lastName: string
   image: string
   bio: string
   restaurantIds: number[]
@@ -32,6 +33,7 @@ export interface IconMeaning {
   id: number
   label: string
   icon: string
+  field: keyof Dish
 }
 
 export interface AboutContent {

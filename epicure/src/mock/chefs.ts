@@ -1,18 +1,20 @@
 import type { Chef } from "../types"
+import yossiImage from "../assets/ShefYossiShitrit.svg"
+
 
 export const chefs: Chef[] = [
   {
     id: 1,
-    name: "Yossi Shitrit",
-    image: "/images/yossi.jpg",
-    bio: `Chef Yossi Shitrit has been living and breathing his culinary dreams
-for more than two decades, including running the kitchen in his first restaurant,
-the fondly-remembered Violet, located in Moshav Udim.`,
+    firstName: "Yossi",
+    lastName: "Shitrit",
+    image: yossiImage,
+    bio: `Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish.`,
     restaurantIds: [4, 5, 6]
   },
   {
     id: 2,
-    name: "Ran Shmueli",
+    firstName: "Ran",
+    lastName: "Shmueli",
     image: "/images/ran.jpg",
     bio: `Chef Ran Shmueli is known for his modern Mediterranean cuisine,
 blending seasonal ingredients with innovative techniques.`,
@@ -20,7 +22,8 @@ blending seasonal ingredients with innovative techniques.`,
   },
   {
     id: 3,
-    name: "Meir Adoni",
+    firstName: "Meir",
+    lastName: "Adoni",
     image: "/images/meir.jpg",
     bio: `Chef Meir Adoni is a leading figure in contemporary European cuisine,
 bringing bold flavors and refined presentation to the table.`,
@@ -28,7 +31,8 @@ bringing bold flavors and refined presentation to the table.`,
   },
   {
     id: 4,
-    name: "Yanir Green",
+    firstName: "Yanir",
+    lastName: "Green",
     image: "/images/yanir.jpg",
     bio: `Chef Yanir Green specializes in Asian fusion cuisine,
 combining vibrant spices with modern culinary creativity.`,
