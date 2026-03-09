@@ -1,4 +1,10 @@
 import type { Restaurant } from "../types"
+import claroImg from "../assets/claro.svg"
+import luminaImg from "../assets/Lumina.svg"
+import tigerLillyImg from "../assets/tiger-lily.svg"
+import onzaImg from "../assets/onza.svg"
+import kitchenMarketImg from "../assets/kitchen-market.svg"
+import mashyaImg from "../assets/mashya.svg"
 
 export const restaurants: Restaurant[] = [
   {
@@ -7,7 +13,7 @@ export const restaurants: Restaurant[] = [
     chefId: 2,
     chef: "Ran Shmueli",
     cuisine: "Mediterranean",
-    image: "/images/claro.jpg",
+    image: claroImg,
     rating: 4
   },
   {
@@ -16,7 +22,7 @@ export const restaurants: Restaurant[] = [
     chefId: 3,
     chef: "Meir Adoni",
     cuisine: "Modern European",
-    image: "/images/lumina.jpg",
+    image: luminaImg,
     rating: 3
   },
   {
@@ -25,7 +31,7 @@ export const restaurants: Restaurant[] = [
     chefId: 4,
     chef: "Yanir Green",
     cuisine: "Asian Fusion",
-    image: "/images/tiger-lilly.jpg",
+    image: tigerLillyImg,
     rating: 4
   },
   {
@@ -34,7 +40,7 @@ export const restaurants: Restaurant[] = [
     chefId: 1,
     chef: "Yossi Shitrit",
     cuisine: "Mediterranean",
-    image: "/images/onza.jpg",
+    image: onzaImg,
     rating: 4
   },
   {
@@ -43,7 +49,7 @@ export const restaurants: Restaurant[] = [
     chefId: 1,
     chef: "Yossi Shitrit",
     cuisine: "Israeli",
-    image: "/images/kitchen-market.jpg",
+    image: kitchenMarketImg,
     rating: 5
   },
   {
@@ -52,7 +58,7 @@ export const restaurants: Restaurant[] = [
     chefId: 1,
     chef: "Yossi Shitrit",
     cuisine: "Modern Israeli",
-    image: "/images/mashya.jpg",
+    image: mashyaImg,
     rating: 4
   }
 ]
