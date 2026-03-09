@@ -20,6 +20,12 @@ export interface Dish {
   isVegan?: boolean
 }
 
+export type DishWithRelations = Dish & {
+  cuisine: Restaurant["cuisine"]
+  chef: Restaurant["chef"]
+  restaurantName: Restaurant["name"]
+}
+
 export interface Chef {
   id: number
   firstName: string

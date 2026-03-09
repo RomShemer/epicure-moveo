@@ -75,7 +75,6 @@
 
 :global(.swiper) {
     --swiper-theme-color: #686868;
-
 }
 
 :global(.swiper-pagination) {
