@@ -36,7 +36,7 @@ const RestaurantCarousel = ({ restaurants, cardProps, layout }: Props) => {
 
     const layoutConfig = { ...defaultLayout, ...layout }
     const isDesktop = useMediaQuery("(min-width: 1024px)")
-    const maxSlidesDesktop = Math.min(restaurants.length, 3)
+    const maxSlidesDesktop = Math.min(restaurants.length, 2)
 
     return (
         <>
@@ -46,6 +46,7 @@ const RestaurantCarousel = ({ restaurants, cardProps, layout }: Props) => {
                 slidesPerView={isDesktop ? maxSlidesDesktop : "auto"}
                 centerInsufficientSlides={layoutConfig.centered}
                 centeredSlides={false}
+                loop={false}
                 navigation
                 pagination={{ clickable: true }}
             >

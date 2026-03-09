@@ -1,3 +1,5 @@
+@import "../../../../config/breakpoints.css";
+
 .section {
     margin-top: 48px;
     padding-left: 20px;
@@ -14,10 +16,7 @@
     line-height: 24px;
 }
 
-
-/* ################################ Desktop styles ################################*/
-
-@media (min-width: 1024px) {
+@media (--desktop) {
 
     .section {
         margin-top: 80px;

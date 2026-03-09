@@ -1,3 +1,5 @@
+@import "../../../../config/breakpoints.css";
+
 .section {
     background-color: #FAFAFA;
     padding: 24px 20px 48px 20px;
@@ -62,11 +64,12 @@
     min-width: 306px;
 }
 
-@media (min-width: 1024px) {
+@media (--desktop) {
 
     .section {
         padding-left: 127px;
         padding-right: 127px;
+        border-bottom: 0.2px solid #e0e0e0;
         margin-top: 0;
     }
 

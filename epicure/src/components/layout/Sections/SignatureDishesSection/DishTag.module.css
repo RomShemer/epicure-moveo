@@ -1,3 +1,5 @@
+@import "../../../../config/breakpoints.css";
+
 .icons {
     display: flex;
     align-items: center;
@@ -17,9 +19,7 @@
     object-fit: contain;
 }
 
-/* ################################ Desktop styles ################################ */
-
-@media (min-width: 1024px) {
+@media (--desktop) {
 
     .icons {
         gap: 12px;
