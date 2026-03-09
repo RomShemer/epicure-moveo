@@ -36,7 +36,17 @@ export interface IconMeaning {
   field: keyof Dish
 }
 
+export type StoreButtonData = {
+  label: string[]
+  image: string
+  alt: string
+  url?: string
+}
+
+
 export interface AboutContent {
   title: string
+  logo: string
   paragraphs: string[]
+  storeButtons: StoreButtonData[]
 }

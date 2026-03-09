@@ -1,0 +1,129 @@
+.section {
+    background-color: #FAFAFA;
+    padding: 24px 20px 48px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+}
+
+
+.logoWrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 32px;
+}
+
+.logo {
+    width: 102px;
+    height: 95px;
+}
+
+.storeButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+}
+
+.description {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 2.14px;
+    text-align: left;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.description:first-child {
+    min-width: 331px;
+}
+
+.description:not(:first-child) {
+    min-width: 306px;
+}
+
+@media (min-width: 1024px) {
+
+    .section {
+        padding-left: 127px;
+        padding-right: 127px;
+        margin-top: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1185px;
+        margin: 0 auto;
+
+    }
+
+    .leftContainer {
+        margin: 0;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        order: 1;
+        max-width: 917.7791748046875;
+    }
+
+    .title {
+        font-size: 30px;
+        width: 665px;
+        height: auto;
+    }
+
+    .textWrapper {
+        width: 569px;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .storeButtons {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        order: 3;
+    }
+
+    .logoWrapper {
+        justify-content: center;
+        order: 2;
+    }
+
+    .logo {
+        width: 178.22085571289062px;
+        height: 166px;
+    }
+
+    .description:first-child {
+        width: auto;
+    }
+
+    .description:not(:first-child) {
+        width: auto;
+    }
+}

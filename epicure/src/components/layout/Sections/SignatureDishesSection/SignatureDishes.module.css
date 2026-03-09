@@ -65,8 +65,8 @@
 
     .section {
         margin-top: 80px;
-       padding-left: 126px;
-       padding-right: 126px;
+        padding-left: 126px;
+        padding-right: 126px;
     }
 
     .title {
@@ -81,8 +81,7 @@
     .swiperWrapper {
         padding-left: 0;
         padding-right: 0;
-        }
-
+    }
 
 
     .buttonContainer {
@@ -111,18 +110,15 @@
 /* ===== Swiper Color Override ===== */
 
 :global(.swiper) {
-  --swiper-theme-color: #9e9e9e;
+    --swiper-theme-color: #9e9e9e;
 }
 
 :global(.swiper-slide) {
-  width: auto !important;
+    width: auto !important;
 }
 
 :global(.swiper-pagination) {
-  position: static !important;
-  margin-top: 5px;
-  text-align: center;
+    position: static !important;
+    margin-top: 5px;
+    text-align: center;
 }
-
-
-
