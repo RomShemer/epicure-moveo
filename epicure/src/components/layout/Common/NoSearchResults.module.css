@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #F9F4EA;
+}
+
+.title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+    margin-bottom: 12px;
+    color: #000;
+    line-height: 24px;
+}
+
+.subtitle {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: #888;
+}

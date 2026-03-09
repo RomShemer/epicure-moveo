@@ -16,6 +16,10 @@
     line-height: 24px;
 }
 
+.noSearchResultContainer {
+    padding-right: 20px;
+}
+
 .swiperWrapper {
     padding-left: 0px;
 }
@@ -76,9 +80,15 @@
 
     }
 
+    .noSearchResultContainer {
+        padding-right: 0;
+    }
+
     .swiperWrapper {
         padding-left: 0;
         padding-right: 0;
+        max-width: 1185px;
+        margin: 0 aut;
     }
 
 

@@ -16,6 +16,10 @@
     line-height: 24px;
 }
 
+.noSearchResultContainer {
+    padding-right: 20px;
+}
+
 @media (--desktop) {
 
     .section {
@@ -31,6 +35,10 @@
         text-align: center;
         margin-bottom: 40px;
 
+    }
+
+    .noSearchResultContainer {
+        padding-right: 0;
     }
 
 }

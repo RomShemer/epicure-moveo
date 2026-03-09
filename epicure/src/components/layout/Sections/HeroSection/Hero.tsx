@@ -5,33 +5,13 @@ import { restaurants } from "../../../../mock/restaurants";
 import { chefs } from "../../../../mock/chefs";
 import { dishes } from "../../../../mock/dishes";
 import { heroText } from "../../../../data/heroText";
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 import backgroundDesktop from "../../../../assets/hero-picture 1.png"
 import backgroundMobile from "../../../../assets/Hero.svg"
 import { useMediaQuery } from "../../../../hooks/useMediaQuery"
+import { useSearch } from "../../../../context/SearchContext";
+import { filterBySearch } from "../../../../utils/filterBySearch";
 
-
-const filterBySearch = <T,>(
-    items: T[],
-    search: string,
-    fields: (keyof T)[]
-): T[] => {
-    if (!search) return [];
-
-    return items.filter((item) =>
-        fields.some((field) => {
-            const value = item[field];
-
-            if (Array.isArray(value)) {
-                return value.some((v) =>
-                    String(v).toLowerCase().includes(search)
-                );
-            }
-
-            return String(value).toLowerCase().includes(search);
-        })
-    );
-};
 
 type SearchResultItem = {
     id: number;
@@ -46,8 +26,9 @@ type Section = {
 
 const Hero = () => {
     const isDesktop = useMediaQuery("(min-width: 1024px)")
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    const [searchTerm, setSearchTerm] = useState("");
+    const { searchTerm, setSearchTerm } = useSearch();
 
     const normalizedSearch = useMemo(
         () => searchTerm.toLowerCase().trim(),
@@ -146,13 +127,17 @@ const Hero = () => {
                             value={searchTerm}
                             placeholder={heroText.placeholder}
                             onChange={(e) => setSearchTerm(e.target.value)}
+                            onFocus={() => setIsDropdownOpen(true)}
+                            onBlur={() => {
+                                setTimeout(() => setIsDropdownOpen(false), 150);
+                            }}
                         />
 
                         {searchTerm.trim() !== "" && <button className={styles.clearButton} onClick={() => setSearchTerm("")}>
                             <img src={xIcon} alt="Clear Search" className={styles.clearIcon} />
                         </button>}
                     </div>
-                    {normalizedSearch && (
+                    {normalizedSearch && isDropdownOpen && (
                         <div className={styles.resultsDropdown}>
                             {sections.map(
                                 (section) =>

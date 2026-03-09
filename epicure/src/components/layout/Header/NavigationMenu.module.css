@@ -1,0 +1,106 @@
+.navigationMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.topContainer {
+    width: 100%;
+    height: 46px;
+    display: flex;
+}
+
+.close {
+    background: none;
+    border: none;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    margin-bottom: 32px;
+}
+
+.clearButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    width: fit-content;
+
+    background-color: transparent;
+
+    margin-top: 11px;
+    margin-left: 19px;
+}
+
+.clearIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.navContainer {
+    width: 100%;
+    height: 367px;
+    padding: 40px 0;
+
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 5px 0px rgba(175, 175, 175, 0.25);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1.92px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+
+.navFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1.92px;
+    color: #000;
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+
+.nav:first-of-type {
+    border-bottom: 1px solid #F2F2F2;
+    padding-bottom: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navFooter a {
+    text-decoration: none;
+    color: #000;
+}
+
+.link {
+    font-size: 14px;
+    color: #777;
+    letter-spacing: 1px;
+}
